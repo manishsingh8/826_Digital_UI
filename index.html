@@ -135,52 +135,55 @@
 
       <!--Banner Starts-->
       <section class="banner_section">
-           <div class="banner_main">
-            <div class="owl-carousel owl-theme owl-carousel1">
-              <div class="img_container">
-                <div class="banner_img1">
-                   <img src="img/banner.svg" alt="">
-                </div>
-              </div>
-              <div class="img_container">
-                <div class="banner_img1">
-                   <img src="img/banner.svg" alt="">
-                </div>
-              </div>
-              <div class="img_container">
-                <div class="banner_img1">
-                   <img src="img/banner.svg" alt="">
-                </div>
+        <div class="banner_main">
+          <div class="owl-carousel owl-theme owl-carousel1">
+            <div class="img_container">
+              <div class="banner_img1">
+                <img src="img/banner.svg" alt="" />
               </div>
             </div>
-           </div>
+            <div class="img_container">
+              <div class="banner_img1">
+                <img src="img/banner.svg" alt="" />
+              </div>
+            </div>
+            <div class="img_container">
+              <div class="banner_img1">
+                <img src="img/banner.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!--Banner Ends-->
 
-
       <!-- carousel new section -->
-    <section class="two_carousel_section">
-      <div class="blue_img" style="border: 1px solid red;">
-        <img src="img/Rectangle 139.svg" alt="">
-      </div>
-      <div class="white_dot_img">
-         <img src="img/Rectangle 140.svg" alt="">
-      </div>
-      <div class="two_carousel_main">
-        <div class="carousel_box">
-  
+      <!-- <section class="two_carousel_section">
+        <div class="blue_img" style="border: 1px solid red">
+          <img src="img/Rectangle 139.svg" alt="" />
         </div>
-        <div class="button_box">
-             <p>What’s New</p>
-             <button class="custom_button">VIEW MORE</button>
+        <div class="white_dot_img">
+          <img src="img/Rectangle 140.svg" alt="" />
         </div>
-      </div>
-    </section>
-
-
-
-
-
+        <div class="two_carousel_main">
+          <div class="carousel_box">
+            <div class="carousel_box_inner1"></div>
+            <div class="carousel_box_inner2"></div>
+          </div>
+          <div class="button_box">
+            <p class="para_box1">What’s New</p>
+            <button class="custom_button btn1">VIEW MORE</button>
+            <div class="card_btn">
+              <button class="left_arrow left4">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="right_arrow right4">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section> -->
 
       <!-- Card Section Started -->
       <section class="card_section">
@@ -395,7 +398,7 @@
                     </div>
                   </div>
                 </a>
-              
+
                 <a href="" class="card_anchor_tag anchor_item3">
                   <div class="card_bottom_main">
                     <div class="card_bottom_inner1 card_bottom_btn">
@@ -520,6 +523,45 @@
       <section class="other_section"></section>
       <!--Section Ends-->
 
+      <section class="watch_section">
+        <div class="watch_main">
+          <div class="watch_text">
+            <p class="para1">watch and write</p>
+            <p class="para2">
+              Lorem ipsum dolor sit amet, adipiscing elit. Enim facili, arcu, in
+              consec etiam adipiscing vulputate.
+            </p>
+            <button class="custom_button watch_btn">VIEW MORE</button>
+          </div>
+          <div class="watch_carousel">
+            <div class="watch_carousel_main">
+               <div class="owl-carousel owl-theme owl-carousel4 owl-theme4">
+                 <div class="watch_item">
+                     <img src="img/unsplash_9o8YdYGTT64.svg" alt="">
+                 </div>
+                 <div class="watch_item">
+                   <img src="img/unsplash_P_yxskbh3JI.svg" alt="">
+                 </div>
+                 <div class="watch_item">
+                   <img src="img/unsplash_F1zhKH8WD7A.svg" alt="">
+                   
+                 </div>
+
+               </div>
+
+            </div>
+            <div class="card_btn watch_btn2">
+              <button class="left_arrow left5">
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button class="right_arrow right5">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--Footer Starts-->
       <section class="footer_section">
         <div class="footer_background_img">
@@ -608,7 +650,7 @@
               <img src="img/Group 1110.svg" alt="" />
             </div>
             <div class="footer_right_inner">
-              <img src="img/Mask group.svg" alt="" />
+              <img src="img/Mask group.svg" alt=""  class="img1"/>
               <img src="img/Group 1540.svg" alt="" />
             </div>
           </div>
@@ -643,11 +685,11 @@
         listItem.style = "display:block;";
       });
 
-       //owl Carousel
-       $(".owl-carousel1").owlCarousel({
+      //owl Carousel
+      $(".owl-carousel1").owlCarousel({
         loop: true,
         margin: 10,
-        nav:false,
+        nav: false,
         responsive: {
           0: {
             items: 1,
@@ -660,15 +702,36 @@
           },
         },
       });
-
-
-
+      $(".owl-carousel4").owlCarousel({
+        loop: true,
+        // stagePadding: 20,
+        margin: 10,
+        nav: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          450: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+         
+      $(".left5").click(function (e) {
+        $(".owl-carousel4").trigger("prev.owl");
+      });
+      $(".right5").click(function (e) {
+        $(".owl-carousel4").trigger("next.owl");
+      });
 
 
       $(".owl-carousel").owlCarousel({
         loop: true,
         margin: 10,
-        nav:false,
+        nav: false,
         responsive: {
           0: {
             items: 1,
@@ -679,12 +742,12 @@
           1050: {
             items: 3,
           },
-          1100:{
+          1100: {
             items: 3,
           },
-          1200:{
-            items:4,
-          }
+          1200: {
+            items: 4,
+          },
         },
       });
       $(".left1").click(function (e) {

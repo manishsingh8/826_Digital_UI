@@ -349,10 +349,9 @@ button:focus{
 
 .two_carousel_section{
  width: 100%;
- height: 770px;
+ height: 785px;
  position: relative;
- border: 2px solid black;
-
+ border: 5px solid black;
 }
 .blue_img{
   width: 100%;
@@ -371,18 +370,43 @@ button:focus{
 .white_dot_img img{
   width: 100%;
 }
-
 .two_carousel_main{
   position: relative;
   z-index: 3;
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
-
-.button_box button{
+.carousel_box{
+  width: 80%;
+  height: 100%;
+  border:1px solid red;
+}
+.button_box{
+  border: 1px solid blue;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+.button_box .btn1{
   border-radius: 0px;
+  width: 180px;
   background-color: #F1BD35;
   color:#1C1C1C;
   border:1px solid #F1BD35;
 
+}
+.button_box .para_box1{
+  font-size: 61.04px;
+  color: #FFF;
+  font-weight: normal;
+  font-family:'Knockout';
+}
+.right4{
+  background-color: transparent;
 }
 
 
@@ -671,6 +695,99 @@ button:focus{
 }
 
 
+
+
+/* watch_section start */
+
+
+.watch_section{
+  background-color: #FFE1E1;
+}
+
+.watch_main {
+  /* border:1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding:70px 0px 70px 50px;
+}
+.watch_text{
+  width: 34%;
+  padding-top: 60px;
+  /* border:1px solid black; */
+}
+.watch_carousel{
+  width: 60%;
+}
+.watch_text .para1{
+  font-size: 61.04px;
+  font-family: 'Knockout';
+  font-weight: 400;
+  letter-spacing: 1.22px;
+  text-transform: capitalize;
+  margin-bottom: 0px;
+}
+.watch_text .para2{
+  color: #4D4D4D;
+  font-size: 16px;
+  margin-bottom: 0px;
+  width: 300px;
+}
+
+.watch_btn{
+  border:1px solid #F1BD35;
+  background-color: #F1BD35;
+  color:#1C1C1C;
+  border-radius: 0px;
+  margin-top: 50px;
+}
+
+.watch_carousel_main{
+  /* border: 2px solid #1C1C1C; */
+  position: relative;
+  right: -60px;
+}
+.watch_carousel{
+  /* border:1px solid white; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.owl-theme4 .owl-dots .owl-dot{
+  display: none;
+}
+.watch_item{
+  position: relative;
+  width: 100%;
+  padding-top:100%;
+  overflow: hidden;
+  border-radius: 10.912px;
+}
+.watch_item img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+.watch_btn2{
+  margin-left: 60px;
+  margin-top: 15px;
+}
+.right5:hover{
+  background-color: #1C1C1C;
+  color: #FFF;
+}
+/* watch_section ends */
+
+
+
+
+
+
+
 /* footer section  start*/
 
 
@@ -792,6 +909,7 @@ button:focus{
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
+  overflow: hidden;
 }
 .right_background_img{
   height:100%;
@@ -802,12 +920,13 @@ button:focus{
 }
 .footer_right_inner{
   width: 100%;
-  position: relative;
+  /* position: relative; */
   padding-top: 100%;
   overflow: hidden;
   /* border:1px solid red; */
   z-index: 11;
 }
+
 .footer_right_inner img{
   height: 100%;
   width: 100%;
@@ -815,8 +934,29 @@ button:focus{
   inset: 0;
   object-fit: cover;
 }
+.footer_right_inner .img1{
+  position: absolute;
+  left: 20px;
+}
+
+
+
+
+
+@media screen and (max-width:1035px) {
+   .watch_text{
+    padding-top: 0px ;
+   }
+  .watch_text .para1 {
+     letter-spacing: 0px;
+   }
+}
+
 
 @media screen and (max-width:992px){
+  .watch_text{
+    width: 40%;
+  }
   .footer_inner{
     width: 100%;
   }
@@ -828,13 +968,52 @@ button:focus{
     }
 }
 
+
+
 @media screen and (max-width:767px) {
     .card_section {
-      padding:100px 30px;
+      padding:100px 50px;
     }
+    .watch_text .para1 {
+      font-size: 45px;
+    }
+    .watch_text .para2{
+      width: 210px;
+    }
+
 }
 
 @media screen and (max-width:650px) {
+  .owl-carousel1 .owl-dots{
+    right:0px;
+    bottom: 10px;
+  }
+  .owl-carousel1 .owl-dots .owl-dot span{
+    width: 15.6px;
+    height: 4.92px;
+  }
+         
+     .watch_main{
+      padding: 70px 15px 70px 15px;
+      flex-direction: column-reverse;
+     }
+     .watch_carousel{
+      width: 100%;
+     }
+     .watch_carousel_main{
+      right: -15px;
+     }
+     .watch_text {
+      width: 100%;
+      margin-top: 50px;
+     }
+     .watch_text .para2{
+      width: 100%;
+     }
+     .watch_btn2{
+      margin-left: 40%;
+     }
+    
      .footer_inner1{
       padding: 40px 15px 0px 15px;;
      }
@@ -859,6 +1038,10 @@ button:focus{
 }
 
 @media screen and (max-width:460px) {
+  .watch_carousel_main{
+    right: 0px;
+  }
+
   .footer_list{
     display: grid;
     grid-template-columns: repeat(1,1fr);
