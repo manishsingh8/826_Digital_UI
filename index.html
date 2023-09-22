@@ -1535,11 +1535,11 @@
       });
 
       window.addEventListener("scroll", function () {
-        var headerInner = document.querySelector(".header_inner");
+        var headerInner = document.querySelector(".header_main");
         if (window.scrollY >= 200) {
-          headerInner.classList.add("scrolled");
+          headerInner.classList.add("header_fixed");
         } else {
-          headerInner.classList.remove("scrolled");
+          headerInner.classList.remove("header_fixed");
         }
       });
     </script>
