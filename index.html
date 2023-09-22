@@ -35,14 +35,12 @@
     />
     <!-- CSS Ends-->
 
-    <style>
-     
-    </style>
+    <style></style>
   </head>
 
   <!-- Body Starts-->
 
-  <body id="body">
+  <body id="body" class="active">
     <!--Wrapper Starts-->
     <wrapper>
       <!--Header Starts-->
@@ -1359,15 +1357,13 @@
     </script>
     <script>
       // loader
-
+      
       window.addEventListener("load", function () {
-        body.style.overflow = "hidden";
         const loader = document.querySelector(".loader");
-        document.body.classList.add("loader-visible");
         setTimeout(function () {
+          window.scrollTo(0, 0);
           loader.style.transform = "translateY(-100%)";
-          document.body.classList.remove("loader-visible");
-          body.style.overflow = "visible";
+          body.classList.remove("active");
         }, 1500);
       });
 
