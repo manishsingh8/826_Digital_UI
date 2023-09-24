@@ -514,6 +514,8 @@ header {
   border-radius: 0px;
   font-size: 15px;
   font-weight: 600;
+  text-transform:uppercase ;
+  letter-spacing: 2px;
 }
 
 /* Resource Section Ends */
@@ -521,9 +523,17 @@ header {
 
  /* left-right-section-start */
  
+   .left_right_main{
+    right: 30px;
+   }
+   .left_right_text{
+    justify-content: center;
+    margin-right: 6%;
+   }
    
-   
-
+  .left_right_btn{
+    margin-top: 20px;
+  }
 
 
 
@@ -757,6 +767,10 @@ header {
   .writing_icon_text{
     left: 10%;
   }
+
+  .left_right_text{
+    margin-right: 6%;
+   }
 }
 
 
