@@ -141,7 +141,7 @@ ul li a:hover::after {
 header {
   background-color: #fff;
   width: 100%;
-  position:sticky;
+  position: sticky;
   top: 0px;
   z-index: 999;
   transition: 0.5s ease all;
@@ -311,7 +311,8 @@ header {
   /* background-color: #005cff; */
   height: 100%;
   width: 100%;
-  background-image:url("../img/Rectangle.png"),url('../img/banner-bck-botttom.png');
+  background-image: url("../img/Rectangle.png"),
+    url("../img/banner-bck-botttom.png");
   background-size: 100% 100%, 100% 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -329,46 +330,71 @@ header {
   background-position: right;
   z-index: 1;
 }
-.banner_main{
+.banner_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 2;
 }
-.banner_img{
-  height: 25%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-column-gap: 16.82px;
+.banner_heading span {
+  font-family: "Blimps personal use";
 }
-
-.banner_img_inner{
+.banner_para {
+  width: 60%;
+  margin-top: 15px;
+  text-align: center;
+}
+.banner_btn button {
+  background-color: #fff;
+  border-radius: 0px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.banner_btn {
+  margin-top: 25px;
+}
+.marquee_tag_box{
+  margin-top: 120px;
+  width: 100%;
+}
+.marquee_tag {
+  height: 100%;
+  /* border: 1px solid black; */
+}
+.banner_img {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  column-gap: 16.82px;
+}
+.banner_img_inner {
+  border-radius: 27.097px;
+  /* border: 2px solid black; */
+  overflow: hidden;
+}
+.banner_img .item1 {
   width: 100%;
   padding-top: 51%;
-  overflow: hidden;
   position: relative;
-  border-radius: 27.097px;
+  overflow: hidden;
 }
-.banner_img_inner img{
+.banner_img .item1 img {
   height: 100%;
   width: 100%;
   position: absolute;
   inset: 0;
   object-fit: cover;
 }
-.marquee_tag{
-  height: 100%;
-}
-.marquee_tag_box{
-  height: 35%;
-  position: relative;
-  bottom: 20px;
-  border: 1px solid red;
-
-}
-
-
-
 /* Banner Ends */
+
+
+
+
+
+
+
 
 
 
@@ -793,6 +819,8 @@ header {
 .chapter_section {
   background: #f8f8f8;
   overflow: hidden;
+  /* position: relative; */
+  padding-bottom: 200px !important;
 }
 .chapter_text {
   text-align: center;
@@ -807,13 +835,13 @@ header {
 .chapter_right_img {
   border-radius: 23px;
   overflow: hidden;
+  /* border: 1px solid red; */
 }
 .chapter_left_img {
   width: 58%;
 }
 .chapter_right_img {
   width: 40%;
-
 }
 .chapter_left_img_main {
   width: 100%;
@@ -888,7 +916,7 @@ header {
   margin: 0px;
   position: relative;
 }
-.chapter_right_btm_txt p a{
+.chapter_right_btm_txt p a {
   position: absolute;
   right: 0px;
 }
@@ -952,8 +980,43 @@ header {
 .tabcontent {
   display: none;
 }
+.international_main {
+  /* border: 1px solid red; */
+  width: 70%;
+  display: inline-block;
+  background-color: #ffc000;
+  text-align: center;
+  border-radius: 20px;
+  position: absolute;
+  left: 14%;
+  margin-top: 75px;
+}
+.intern_para {
+  display: flex;
+  justify-content: center;
+}
+.intern_para p {
+  width: 60%;
+}
+.international {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intern_btn {
+  width: 80%;
+  margin-top: 30px;
+}
+.intern_btn button {
+  font-size: 15.71px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 0px;
+  background-color: #fff;
+}
 
-/* chapter -sectio  ends */
+/* chapter -section  ends */
 
 /* support section start */
 
@@ -966,6 +1029,7 @@ header {
   background-position: left, right;
   background-repeat: no-repeat;
   position: relative;
+  margin-top: 220px;
 }
 .support_main {
   width: 100%;
@@ -1272,11 +1336,23 @@ header {
   .support_para p span {
     display: none;
   }
+  .chapter_img {
+    flex-direction: column;
+  }
   .chapter_left_img {
     width: 100%;
   }
   .chapter_right_img {
-    display: none;
+    margin-top: 40px;
+    width: 100%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .chapter_right_btm {
+    margin-top: 30px;
+  }
+  .chapter_right_btm_txt::after {
+    bottom: -8px;
   }
 }
 
@@ -1428,9 +1504,16 @@ header {
   .involved_heading_para p {
     width: 100%;
   }
+  .chapter_section_inner {
+    padding: 0px 15px;
+  }
   .chapter_blur_img {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 0px;
+  }
+  .international_main {
+    width: 84%;
+    left: 8%;
   }
   .support_right {
     display: none;
@@ -1486,6 +1569,7 @@ header {
     background-size: 100% 100%;
     background-position: left;
     background-repeat: no-repeat;
+    margin-top: 300px;
   }
   .footer_list {
     display: grid;
