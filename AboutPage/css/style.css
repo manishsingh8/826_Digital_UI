@@ -305,6 +305,58 @@ header {
 
 /* header ends */
 
+
+.dropdown {
+  background-color: #005cff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 12vh;
+  left: -100%;
+  z-index: 999;
+  transition: 0.5s ease all;
+}
+.dropdown ul {
+  margin: 40px;
+  position: absolute;
+  z-index: 4;
+}
+.dropdown ul li {
+  padding: 15px 0px;
+}
+.dropdown ul li a {
+  font-weight: 600;
+  color: #ffffff;
+}
+.dropdown ul li .list_item2 {
+  display: none;
+  background-color: white;
+  height: 100px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0px 1.52381px 0px 0px #232323;
+}
+.dropdown ul li .list_item2 .list ul{
+  /* border:1px solid red; */
+  margin:10px 0px 0px 15px;
+}
+.dropdown ul li .list_item2 .list ul li{
+  /* border:1px solid red; */
+  padding: 5px 0px;
+}
+
+.list ul li a {
+  color: #4d4d4d;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+
+
+
+
+
 /* Banner Start */
 
 .banner_section {
@@ -581,10 +633,11 @@ header {
 
 .carousel_section {
   border: 5px solid red;
-  border-radius: 0 0 50% 50%;
   overflow: hidden;
 }
-
+.owl-theme .owl-nav.disabled+.owl-dots {
+  display: none;
+}
 .carousel_main {
   display: flex;
   justify-content: center;
@@ -592,7 +645,7 @@ header {
 .carousel_inner {
   padding: 0px 70px;
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .carousel_para1 p {
   color: #1c1c1c;
